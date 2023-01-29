@@ -1,0 +1,16 @@
+@mixin container {
+    max-width: 1140px;
+    width: 100%;
+    padding: 0 16px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+@mixin button ($padding-top, $padding-right, $padding-bottom, $padding-left ) {
+    border: none;
+    cursor: pointer;
+    padding-top: $padding-top;
+    padding-right: $padding-right;
+    padding-bottom: $padding-bottom;
+    padding-left: $padding-left;
+    background: linear-gradient(92.18deg, #5E3928 20.13%, #E4A16F 92.93%);
+}

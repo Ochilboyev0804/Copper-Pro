@@ -1,0 +1,104 @@
+@import "./mixin";
+$primaryColor: #ffffff;
+
+.footer {
+  background-image: url(../Images/bg-img.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  background-position: center;
+  &__block {
+    @include container;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 100px 0;
+  }
+  &__wrapper-Copperlink {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 134.4%;
+    color: #adadad;
+    display: inline-block;
+    padding-top: 24px;
+    padding-bottom: 21px;
+  }
+  &__wrapper-link {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 134.4%;
+    text-decoration-line: underline;
+    color: $primaryColor;
+  }
+  &__nav {
+    display: flex;
+  }
+  &__linktop{
+    font-style: normal;
+font-weight: 800;
+font-size: 18px;
+line-height: 2.5;
+color: $primaryColor;
+  }
+  &__link {
+    font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 2.5;
+color: $primaryColor;
+  }
+  &__link:hover {
+text-decoration-line: underline;
+  }
+  &__item-phonenumber, &__item-gmail{
+    font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 134.4%;
+display: inline-block;
+color: $primaryColor;
+padding-bottom: 13px;
+  }
+  &__list-img{
+    margin-left: -9px;
+  }
+  &__link-logo{
+    padding:0 9px;
+    margin-top: 12px;
+  }
+  
+}
+@media only screen and (max-width: 992px) {
+  .footer {
+    @include container;
+    max-width: 960px;
+    &__block {
+      display: block;
+    }
+    &__item {
+      padding: 0;
+      margin-right: 69px;
+    }
+    &__nav{
+      justify-content: space-between;
+    }
+  }
+}
+@media only screen and (max-width: 576px) {
+  .footer {
+    @include container;
+    max-width: 575px;
+    &__block {
+      display: block;
+    }
+    &__item {
+      padding: 0;
+      margin-right: 69px;
+    }
+    &__nav{
+      flex-wrap: wrap;
+    }
+  }
+}
